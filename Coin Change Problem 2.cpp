@@ -73,7 +73,8 @@ int main()
     cout<<"Minimum Number of coins required are : "<<max_profit;
 
     cout<<"1-D Approach to solve the problem with top-Down "<<"\n";
-    
+    max_profit = coinChange1D(value, wt, n);
+    cout<<"Minimum Number of coins required are : "<<max_profit;
 
     // for(int i = 0; i < n+1; i++){
     //     t[i] = new int[wt + 1];
