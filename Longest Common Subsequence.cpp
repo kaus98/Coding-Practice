@@ -65,6 +65,16 @@ int LCSTopDown(string& str1, string& str2, int n, int m, int ** t){
     return t[m][n];
 }
 
+bool SequencePatternMatching(string& pattern, string& seq, int n, int m, int ** t){
+    int result = LCSTopDown(pattern, seq, n, m, t);
+    if (result == m){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 string printLCSTopDown(string& str1, string& str2, int n, int m, int ** t){
     for (int i = 0; i<=m; i++){
         for (int j = 0; j<=n; j++){
