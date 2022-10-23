@@ -2,6 +2,8 @@ class Solution {
 public:
     
     int compareVersion1(string version1, string version2) {
+        
+        // This is wrong Solution not working
         int i=0,j=0;
         int v1L = version1.length();
         int v2L = version2.length();
