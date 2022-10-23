@@ -53,4 +53,30 @@ public:
     
     return ans;
 }
+    
+        vector<string> findRepeatedDnaSequences(string s) {
+            // More Faster Solution: time : 85ms
+        if (s.size() < 10) return {};
+        unordered_map<char, int> dna {{'A', 0}, {'C', 1}, {'G', 2}, {'T', 3}};
+        unordered_set<int> candidates;
+        unordered_set<string> duplicates;
+        int pw = pow(4,9);
+        int p = 10000007;
+        int i = 0;
+        int hash = 0;
+        while (i < 10) {
+            hash = (hash * 4 + dna[s[i]]) % p;
+            ++i;
+        }
+        candidates.insert(hash);
+        i = 1;
+        while (i + 9 < s.size()) {
+            hash = ((hash - pw * dna[s[i-1]] ) % p + p) % p;
+            hash = ((hash * 4) + dna[s[i + 9]]) % p;
+            if (candidates.find(hash) != candidates.end()) duplicates.insert(s.substr(i,10));
+            else candidates.insert(hash);
+            ++i;
+        }
+        return vector<string>(duplicates.begin(), duplicates.end());
+    }
 };
