@@ -1,6 +1,7 @@
 class Solution {
 public:
     vector<string> findRepeatedDnaSequences(string s) {
+        // My Solution : Time -	260 ms Memory - 19.6 MB
         vector<string> ans;
         
         unordered_set <string> sentences;        
@@ -33,4 +34,23 @@ public:
 
         
     }
+    
+    vector<string> findRepeatedDnaSequences(string s) 
+{
+        // Checking other solutions : Time -	117 ms Memory - 23.36 MB
+    if(s.size()<10)
+        return {};
+    
+    unordered_map<string,int>mp;
+    vector<string>ans;
+    
+    for(int i=0;i<s.size()-9;++i)
+        ++mp[s.substr(i,10)];
+    
+    for(auto it:mp)
+        if(it.second>1)
+            ans.emplace_back(it.first);
+    
+    return ans;
+}
 };
