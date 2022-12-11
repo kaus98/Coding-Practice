@@ -1,3 +1,10 @@
+#include <iostream>
+#include <vector>
+#include <stack>
+#include <utility>
+
+using namespace std;
+
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {
@@ -19,3 +26,14 @@ public:
         return arr[amount];
     }
 };
+
+int main(){
+  sol = Solution();
+  vector<int> vec; 
+  vec.push_back(1);
+  vec.push_back(3);
+  vec.push_back(6);
+
+  int solution = sol.coinChange(vec, 10);
+  cout<<solution;
+}
