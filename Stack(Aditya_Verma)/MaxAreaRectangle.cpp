@@ -57,24 +57,21 @@ int MaximumAreaHistogram(vector<int> arr){
 int maximalRectangle(vector<vector<char>>& matrix) {
   vector<int> arr ;
   for(int i = 0 ; i < matrix[0].size(); i++){
-    arr.push_back(matrix[0][i]);
+    arr.push_back(matrix[0][i]-48);
   }
   int ans = MaximumAreaHistogram(arr);
 
   for(int i = 1; i < matrix.size(); i++){
     for(int j = 0; j < matrix[0].size(); j++){
-      if(matrix[i][j] == 0) arr[j] = 0;
+      if(matrix[i][j] == 48) arr[j] = 0;
       else arr[j] += 1;
     }
-    ans = maximum(ans, MaximumAreaHistogram(arr));
+    ans = max(ans, MaximumAreaHistogram(arr));
   }
   return ans;
 }
 
 int main(){
-  // Question is to find the Nearest bigger element next to Right Side.
-  vector<int> arr{2,1,5,6,2,3};
-  int result = MaximumAreaHistogram(arr);
-  cout<< "Result is : "<<result;
+  //Tested on Leetcode. Workes Fine.
   return 0;
 }
