@@ -5,3 +5,5 @@
 .vscode/tasks.json
 *.json
 .ccls-cache/
+.replit
+replic.nix
