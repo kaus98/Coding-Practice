@@ -8,26 +8,27 @@
 
 using namespace std;
 
-vector<int> SortNearlySortedArray(vector<int>& arr, int k){
-  priority_queue<int> maxHeap;
-  vector<int> arr;
+vector<int> SortNearlySortedArray(vector<int> arr, int k){
+  //Sort the Array that is nearly sorted and only shuffeled by factor of x
+  priority_queue <int, vector<int>, greater<int>> minHeap;
+  vector<int> result;
   for(auto x: arr){
-    maxHeap.push(x);
-    if(maxHeap.size() > k) {
-      arr.push_back(maxHeap.top());
-      maxHeap.pop();
+    minHeap.push(x);
+    if(minHeap.size() >= k) {
+      result.push_back(minHeap.top());
+      minHeap.pop();
     }
   }
-  while(!maxHeap.empty()){
-    arr.push_back(maxHeap.top());
-    maxHeap.pop();
+  while(!minHeap.empty()){
+    result.push_back(minHeap.top());
+    minHeap.pop();
   }
-  return arr;
+  return result;
 }
 
 int main(){
   vector<int> arr{6,5,3,2,9,10,8,14,12,11};
-  vector<int> k = KthSmallestElement(arr, 4);
+  vector<int> k = SortNearlySortedArray(arr, 4);
   cout<<"Sorted Array is "<<endl;
-  fors( auto x: :k) cout<<k<<"\t";
+  for(auto x: k) cout<<x<<"\t";
 }
