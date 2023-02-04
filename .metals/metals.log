@@ -1,0 +1,37 @@
+2022.12.18 00:02:05 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\kaus_pathak\Personal Projects\Coding-Practice\.metals\lsp.trace.json or C:\Users\kaus_pathak\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.18 00:02:11 INFO  logging to file C:\Users\kaus_pathak\Personal Projects\Coding-Practice\.metals\metals.log
+2022.12.18 00:02:11 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\kaus_pathak\Personal Projects\Coding-Practice' for client Visual Studio Code 1.74.1.
+2022.12.18 00:02:23 INFO  time: initialize in 11s
+2022.12.18 00:02:24 WARN  Build server is not auto-connectable.
+2022.12.18 00:02:24 WARN  no build tool detected in workspace 'C:\Users\kaus_pathak\Personal Projects\Coding-Practice'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Dec 18, 2022 12:02:57 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 18, 2022 12:03:22 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 18, 2022 12:03:49 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 18, 2022 12:04:02 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 18, 2022 12:04:22 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 18, 2022 12:05:38 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 18, 2022 12:05:48 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 18, 2022 12:06:01 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 18, 2022 12:08:06 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.12.18 00:12:59 INFO  shutting down Metals
+2022.12.18 00:25:43 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\kaus_pathak\Personal Projects\Coding-Practice\.metals\lsp.trace.json or C:\Users\kaus_pathak\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.12.18 00:25:45 INFO  logging to file C:\Users\kaus_pathak\Personal Projects\Coding-Practice\.metals\metals.log
+2022.12.18 00:25:45 INFO  Started: Metals version 0.11.9 in workspace 'C:\Users\kaus_pathak\Personal Projects\Coding-Practice' for client Visual Studio Code 1.74.1.
+2022.12.18 00:25:50 INFO  time: initialize in 5.42s
+2022.12.18 00:25:51 WARN  Build server is not auto-connectable.
+2022.12.18 00:25:51 WARN  no build tool detected in workspace 'C:\Users\kaus_pathak\Personal Projects\Coding-Practice'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Dec 18, 2022 1:53:23 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 18, 2022 1:54:42 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 18, 2022 2:16:36 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
