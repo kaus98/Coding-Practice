@@ -67,17 +67,47 @@ vector<int> kahnSorting(unordered_map<int, vector<int>> &mp, int v, vector<vecto
 }
 
 
+vector<int> KahnAlgo(int n, vector<vector<int>> &edges){
+    list<int> *l = new list<int>[n];
+    vector<int> indegree(n, 0);
+
+    for(auto x: edges){
+        l[x[0]].push_back(x[1]);
+        indegree[x[1]]++;
+    }
+    queue<int> qu;
+    for(int i = 0; i < n; i++){
+        if(indegree[i] == 0) qu.push(i);
+    }
+    
+    int top;
+    vector<int> result;
+
+    while(!qu.empty()){
+        top = qu.front();
+        qu.pop();
+        result.push_back(top);
+
+        for(int x: l[top]){
+            indegree[x]--;
+            if(indegree[x] == 0) qu.push(x);
+        }
+    }
+
+    return result;
+}
+
 vector<int> topologicalSort(vector<vector<int>> &edges, int v, int e)  {
     // Write your code here
     vector<int> result;
-    unordered_map<int, vector<int>> mp;
-    for(auto x: edges){
-        mp[x[0]].push_back(x[1]);
-    }
+    // unordered_map<int, vector<int>> mp;
+    // for(auto x: edges){
+    //     mp[x[0]].push_back(x[1]);
+    // }
 
     // result = ts(mp, v);
 
-    result = kahnSorting(mp, v, edges);
+    result = KahnAlgo(v, edges);
     return result;
 }
 
