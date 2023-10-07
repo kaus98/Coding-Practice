@@ -1,3 +1,4 @@
+//Make Palindrome by Swapping
 class Solution {
 public:
     int minMovesToMakePalindrome(string s) {
@@ -52,3 +53,39 @@ public:
         return count;
     }
 };
+
+
+//Make Palindrome by merging and not swapping
+#include <bits/stdc++.h> 
+int palindrome(vector<int> A)
+{
+	// Write your code here.
+	int i = 0;
+	int j = A.size()-1;
+
+	long long int left = A[i];
+	long long int right = A[j];
+	int count = 0;
+
+	while(i < j){
+		if(left==right){
+			i++;
+			j--;
+			left = A[i];
+			right = A[j];
+		} else if( left > right){
+			--j;
+			right+=A[j];
+			// A[j] = right;
+			count++;
+		} else {
+			++i;
+			left+=A[i];
+			// A[i] = left;
+			count++;
+		}
+	}
+
+	return count;
+
+}
