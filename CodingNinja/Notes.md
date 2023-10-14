@@ -1,4 +1,4 @@
-#Questions from Coding Ninja not in 450DSA sheet
+# Questions from Coding Ninja not in 450DSA sheet
 
 | Question         | Link     | Status |
 |--------------|-----------|------------|
